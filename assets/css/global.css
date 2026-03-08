@@ -1,1 +1,35 @@
-@import url(./list.css);
+
+.pokemon-list {
+    padding: 0;
+}
+
+.pokemon-list__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.pokemon-list li {
+    display: grid;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.type-grass {
+    background: rgb(120, 200, 80);
+}
+.type-fire {
+    background: rgb(240, 128, 48);
+}
+.type-water {
+    background: rgb(104, 144, 240);
+}
+.type-electric {
+    background: rgb(248, 208, 48);
+}
