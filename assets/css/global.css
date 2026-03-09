@@ -1,7 +1,16 @@
 * {
-    font-family: 'Roboto',system-ui, '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 1rem;
+    font-family: 'Roboto', system-ui, '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+li {
+    list-style: none;
 }
 
 .pokemon-list {
@@ -17,35 +26,83 @@
     padding: 0;
 }
 
-.pokemon-list li {
+.pokemon {
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: white;
     border-radius: 2rem;
     font-size: 18px;
-    padding: 0.5rem;
-    margin-bottom: 8px;
-    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-.pokemon-list__items li img {
-    max-width: 100%;
-    height: 100px;
+.pokemon:hover {
+    transform: scale(1.1);
+}
+
+.pokemon-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.pokemon-number {
+    font-size: 0.75rem;
+    opacity: 0.7;
     align-self: flex-end;
 }
 
+.pokemon-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
 
+.pokemon-info .type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon-info li {
+    background: rgba(255, 255, 255, 0.452);
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.pokemon-info img {
+    width: 120px;
+    height: auto;
+    border-radius: 0.5rem;
+}
 
 #grass {
-    background: rgb(120, 200, 80);
+    background: linear-gradient(135deg, rgb(120, 200, 80), rgb(100, 180, 60));
 }
+
 #fire {
-    background: rgb(240, 128, 48);
+    background: linear-gradient(135deg, rgb(240, 128, 48), rgb(220, 108, 28));
 }
+
 #water {
-    background: rgb(104, 144, 240);
+    background: linear-gradient(135deg, rgb(104, 144, 240), rgb(84, 124, 220));
 }
+
 #electric {
-    background: rgb(248, 208, 48);
+    background: linear-gradient(135deg, rgb(248, 208, 48), rgb(228, 188, 28));
 }
