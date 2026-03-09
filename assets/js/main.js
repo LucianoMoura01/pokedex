@@ -12,14 +12,3 @@ const pokemonTypes = {
     "Blastoise": "water",
     "Pikachu": "electric"
 };
-
-const items = document.querySelectorAll('#pokemon-list-items li');
-
-items.forEach((item) => {
-    const name = item.innerText; 
-    const type = pokemonTypes[name]; 
-
-    if (type) {
-        item.classList.add(`type-${type}`); 
-    }
-});
