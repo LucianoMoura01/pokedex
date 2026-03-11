@@ -1,4 +1,5 @@
-console.log('Mão na massa!');
+console.log('Mão na massa!'); 
+
 
 const pokemonTypes = {
     "Bulbasaur": "grass",
