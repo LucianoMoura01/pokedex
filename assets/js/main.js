@@ -9,7 +9,7 @@ function convertPokemonToLi(pokemon) {
             </div>
             <div class="pokemon-info">
                 <ol class="type">
-                    ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
+                    ${pokemon.types.map((type) => `<li class="type ${pokemon.type}">${type}</li>`).join()}
                 </ol>
                 <img src="https://www.smogon.com/dex/media/sprites/xy/${pokemon.name.toLowerCase()}.gif" alt="${pokemon.name}">
            </div>
@@ -19,7 +19,7 @@ function convertPokemonToLi(pokemon) {
 
 const pokemonList = document.getElementById('pokemonList');
 
-pokeApi.getPokemons().then((pokemons) => {
+pokeApi.getPokemons().then((pokemons = []) => {
     const newHtml = pokemons.map(convertPokemonToLi).join('')
-    pokemonList.innerHTML += newHtml
+    pokemonList.innerHTML = newHtml
 })
