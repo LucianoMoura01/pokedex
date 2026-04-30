@@ -1,4 +1,14 @@
 {
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Uma aplicação Pokedex interativa que lista e exibe pokémons",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html"
+  },
+  "keywords": ["pokemon", "pokedex", "api"],
+  "author": "LucianoMoura01",
+  "license": "MIT",
   "dependencies": {
     "normalize.css": "^8.0.1"
   }

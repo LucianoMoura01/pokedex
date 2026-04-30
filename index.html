@@ -22,12 +22,116 @@
 <body>
     <header class="header">
         <div class="icons">
-            <button class="arrow" onclick="history.back()"><i class="ph ph-arrow-left" id="arrow"></i></button>
+            <button class="arrow" onclick="goBack()"><i class="ph ph-arrow-left" id="arrow"></i></button>
             
-            <button class="menu"><i class="ph ph-list" id="menu"></i></button>
+            <button class="menu" id="menuBtn" onclick="toggleMenu()"><i class="ph ph-list" id="menu"></i></button>
         </div>
         <h1 class="header_title">Pokedex</h1>
     </header>
+
+    <!-- Menu Lateral -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                <i class="ph ph-list"></i>
+                <h2>Filtros</h2>
+            </div>
+            <button class="close-menu" onclick="closeMenu()"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="sidebar-content">
+            <div class="filter-section">
+                <h3><i class="ph ph-tag"></i> Filtrar por Tipo</h3>
+                <div class="filter-grid">
+                    <button class="filter-btn" onclick="filterByType('all')" data-type="all">
+                        <span class="filter-icon">✨</span>
+                        <span>Todos</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('normal')" data-type="normal">
+                        <span class="type-dot normal-dot"></span>
+                        <span>Normal</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('fire')" data-type="fire">
+                        <span class="type-dot fire-dot"></span>
+                        <span>Fogo</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('water')" data-type="water">
+                        <span class="type-dot water-dot"></span>
+                        <span>Água</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('electric')" data-type="electric">
+                        <span class="type-dot electric-dot"></span>
+                        <span>Elétrico</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('grass')" data-type="grass">
+                        <span class="type-dot grass-dot"></span>
+                        <span>Grama</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('ice')" data-type="ice">
+                        <span class="type-dot ice-dot"></span>
+                        <span>Gelo</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('fighting')" data-type="fighting">
+                        <span class="type-dot fighting-dot"></span>
+                        <span>Lutador</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('poison')" data-type="poison">
+                        <span class="type-dot poison-dot"></span>
+                        <span>Veneno</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('ground')" data-type="ground">
+                        <span class="type-dot ground-dot"></span>
+                        <span>Terra</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('flying')" data-type="flying">
+                        <span class="type-dot flying-dot"></span>
+                        <span>Voador</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('psychic')" data-type="psychic">
+                        <span class="type-dot psychic-dot"></span>
+                        <span>Psíquico</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('bug')" data-type="bug">
+                        <span class="type-dot bug-dot"></span>
+                        <span>Inseto</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('rock')" data-type="rock">
+                        <span class="type-dot rock-dot"></span>
+                        <span>Pedra</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('ghost')" data-type="ghost">
+                        <span class="type-dot ghost-dot"></span>
+                        <span>Fantasma</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('dragon')" data-type="dragon">
+                        <span class="type-dot dragon-dot"></span>
+                        <span>Dragão</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('dark')" data-type="dark">
+                        <span class="type-dot dark-dot"></span>
+                        <span>Sombrio</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('steel')" data-type="steel">
+                        <span class="type-dot steel-dot"></span>
+                        <span>Aço</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterByType('fairy')" data-type="fairy">
+                        <span class="type-dot fairy-dot"></span>
+                        <span>Fada</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Overlay do Menu -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Modal de Detalhes do Pokémon -->
+    <div class="modal" id="pokemonModal" onclick="closePokemonModal(event)">
+        <div class="modal-content" id="modalContent" onclick="event.stopPropagation()">
+            <!-- Conteúdo preenchido via JavaScript -->
+        </div>
+    </div>
 
     <main class="main">
         <div class="pokemon-list" id="pokemon-list">
@@ -38,8 +142,8 @@
     </main>
 
     <!-- JavaScript -->
-     <script src="./assets/js/pokemon-model.js"></script>
-     <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
