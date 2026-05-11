@@ -89,4 +89,3 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ---
 
 *Pokémon é uma marca registrada da Nintendo, Game Freak e Creatures Inc. Este projeto é apenas para fins educacionais e não possui afiliação oficial.*</content>
-<parameter name="filePath">c:\Users\Moura\Desktop\Estudo\pokedex\README.md
