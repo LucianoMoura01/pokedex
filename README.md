@@ -2,11 +2,11 @@
 
 Uma aplicação web interativa para explorar e visualizar informações sobre Pokémon, utilizando a PokeAPI para obter dados atualizados e precisos.
 
-## 📋 Descrição
+## Descrição
 
 Este projeto é uma Pokédex completa que permite aos usuários navegar por uma vasta coleção de Pokémon, filtrar por tipos, visualizar detalhes individuais e explorar estatísticas. Desenvolvida com tecnologias web modernas, oferece uma experiência intuitiva e responsiva.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - **Listagem Completa**: Exibe todos os Pokémon disponíveis na PokeAPI
 - **Filtragem por Tipo**: Filtre Pokémon por seus tipos (Normal, Fogo, Água, etc.)
@@ -18,7 +18,7 @@ Este projeto é uma Pokédex completa que permite aos usuários navegar por uma 
 - **Interface Responsiva**: Design adaptável para desktop e dispositivos móveis
 - **Navegação Intuitiva**: Menu lateral para filtros e navegação fácil
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura da aplicação
 - **CSS3**: Estilização e layout responsivo
@@ -28,7 +28,7 @@ Este projeto é uma Pokédex completa que permite aos usuários navegar por uma 
 - **Google Fonts (Roboto)**: Tipografia
 - **Normalize.css**: Reset de estilos para consistência cross-browser
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 
@@ -55,14 +55,14 @@ Este projeto é uma Pokédex completa que permite aos usuários navegar por uma 
      npm start
      ```
 
-## 📱 Como Usar
+## Como Usar
 
 1. **Navegação Principal**: Use as setas de navegação no header
 2. **Filtrar Pokémon**: Clique no ícone de menu (☰) para abrir o painel lateral e selecione um tipo
 3. **Visualizar Detalhes**: Clique em qualquer Pokémon da lista para abrir o modal com informações completas
 4. **Voltar**: Use a seta para trás para retornar à lista principal
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 pokedex/
@@ -77,12 +77,12 @@ pokedex/
 │       └── pokemon-model.js # Modelo de dados do Pokémon
 ```
 
-## 👨‍💻 Autor
+## Autor
 
 **Luciano Moura**
 - GitHub: [@LucianoMoura01](https://github.com/LucianoMoura01)
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
